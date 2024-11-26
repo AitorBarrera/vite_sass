@@ -1,0 +1,15 @@
+@use "globals" as globals; // Importa todo desde globals
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ff86ef;
+
+    @include globals.respond-to("small"){
+        background-color: #82ee2a;
+    }
+}
