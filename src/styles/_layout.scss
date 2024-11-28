@@ -4,10 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: globals.$color-secundario-texto;
+    font-family: globals.$font-family-parrafo;
+    // cursor: wait;
 }
 
 body{
-    background-color: #ff86ef;
+    background-color: globals.$color-primario-3;
 
     @include globals.respond-to("small"){
         background-color: #82ee2a;

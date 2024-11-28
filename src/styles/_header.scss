@@ -1,1 +1,45 @@
 @use "globals" as globals; // Importa todo desde globals
+
+header{
+    background-image: url(../assets/nocheEstrellada.jpg);
+
+    @include globals.flex-container(space-around, center, row);
+    width: 100%;
+    padding: globals.$space-xl;
+
+    position: relative;
+
+    .cristalNegro{
+        background-color: globals.$color-background-header;
+
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+    }
+
+    :not(.cristalNegro){
+        z-index: 1;
+    }
+
+    img{
+        width: 15%;
+    }
+
+    nav{
+        flex-basis: 50%;
+
+        ul{
+            @include globals.flex-container(space-between, center, row);
+
+            li{
+                display: inline;
+
+                a{
+                    text-decoration: none;
+                    font-family: globals.$font-family-etiqueta;
+                }
+            }
+        }
+    }
+}

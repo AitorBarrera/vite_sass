@@ -1,0 +1,78 @@
+@font-face {
+    font-family: Kristi;
+    src: url(../assets/fonts/Kristi-Regular.woff);
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../assets/fonts/Lato-Regular.woff);
+}
+
+@font-face {
+    font-family: Merienda;
+    src: url(../assets/fonts/Merienda-VariableFont_wght.woff);
+}
+
+/* Mode 1 */
+/* color */
+$color-primario: #143458;
+$color-primario-2: #bbdbff;
+$color-primario-3: #061321;
+$color-primario-hover: #0280c6;
+$color-secundario: #BEA724;
+$color-secundario-2: #fded59;
+$color-secundario-3: #ffffc9;
+$color-secundario-texto: #fffaa5;
+$color-soporte-1: #8dcc52;
+$color-soporte-3: #f44930;
+$color-soporte-4: #000000;
+$color-background-header: #000000cc;
+
+
+/* Mode 1 */
+/* number */
+$font-size-etiqueta: 0.75rem;
+$font-size-parrafo-movil: 0.75rem;
+$font-size-pequenyo: 0.875rem;
+$font-size-parrafo: 1.25rem;
+$font-size-h2: 4rem;
+$font-size-h1: 6rem;
+$font-spacing-etiqueta: 1.0625rem;
+$font-spacing-pequeño: 1.3125rem;
+$font-spacing-parrafo: 1.875rem;
+$font-spacing-parrafo-movil: 1.875rem;
+$font-spacing-h2: 6rem;
+$font-spacing-h1: 9rem;
+
+/* string */
+$font-family-etiqueta: Lato;
+$font-family-h1: Kristi;
+$font-family-h2: Kristi;
+$font-family-parrafo: Merienda;
+$font-family-parrafo-movil: Merienda;
+$font-family-pequenyo: Merienda;
+
+/* Mode 1 */
+/* number */
+$grid-cols: 0.75rem;
+$grid-gutter: 1.25rem;
+$grid-width: 3.75rem;
+
+/* Mode 1 */
+/* number */
+$icon-size-small: 0.9375rem;
+$icon-size-normal: 1.5625rem;
+$icon-size-large: 2.1875rem;
+
+//Spacing
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 0.75rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2rem;
+$space-xxl: 3rem;
+$space-xxxl: 4rem;
+
+$border-h1: 12px solid $color-secundario;
+$border-img-portada: 1px solid $color-primario;
