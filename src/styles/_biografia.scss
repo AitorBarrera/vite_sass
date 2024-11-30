@@ -1,0 +1,47 @@
+@use "globals" as globals;
+
+section.biografia{
+    margin-top: globals.$space-xxl;
+
+    h2{
+        text-align: center;
+        color: globals.$color-secundario;
+        font-weight: 500;
+    }
+
+    article#biografiaArticle{
+        @include globals.grid-container();
+
+        margin: globals.$space-xl 0;
+        
+        div.texto{
+            grid-column: 1/7;
+            
+            @include globals.flex-container(space-evenly,center,column);
+        }
+
+        figure{
+            grid-column: 7/13;
+            width: 100%;
+            
+            img{
+                width: 100%;
+            }
+        }
+
+        
+        // movil
+        @include globals.respond-to(medium){
+            @include globals.flex-container(start, start, column);
+        }
+    }
+    
+    div.buttonContainer{
+        @include globals.flex-container(center, center, row);
+        width: 100%;
+        
+        button{
+            @include globals.button();
+        }
+    }
+}

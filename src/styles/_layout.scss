@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     color: globals.$color-secundario-texto;
-    font-family: globals.$font-family-parrafo;
+    font-family: Lato;
     // cursor: wait;
 }
 
@@ -15,4 +15,24 @@ body{
     @include globals.respond-to("small"){
         background-color: #82ee2a;
     }
+}
+
+h1{
+    @include globals.font(h1);
+}
+
+h2{
+    @include globals.font(h2);
+}
+
+p{
+    @include globals.font(parrafo);
+
+    @include globals.respond-to(medium){
+        @include globals.font("parrafo-movil");
+    };
+}
+
+figcaption{
+    @include globals.font(etiqueta);
 }

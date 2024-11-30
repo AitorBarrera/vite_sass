@@ -3,18 +3,22 @@
 .portada{
     h1{
         color: globals.$color-secundario;
-        font-size: globals.$font-size-h1;
-        font-family: globals.$font-family-h1;
+        
         text-shadow: 5px 5px globals.$color-primario;
         font-weight: 400;
-
-        // -webkit-text-stroke: 0.0000000001px globals.$color-primario;
 
         margin: globals.$space-lg;
         padding: globals.$space-sm;
         text-align: center;
 
         border: globals.$border-h1;
+
+        @include globals.respond-to(medium){          
+            @include globals.font(h2);
+            border: 0;
+            margin: 0;
+            padding: 0
+        };
     }
 
     img{

@@ -1,10 +1,10 @@
 @use "sass:map";
+@use "variables" as *;
 
 @mixin respond-to($breakpoint) {
   $breakpoints: (
     "small": "max-width: 599px",
-    "medium": "min-width: 800px",
-    "large": "min-width: 1000px",
+    "medium": "max-width: 1500px",
   );
 
   $query: map.get($breakpoints, $breakpoint);
@@ -19,9 +19,53 @@
   }
 }
 
+// Contenedor flex
+@mixin container() {
+  margin: $margin-container;
+  width: $width-container;
+
+  @include respond-to(medium){    
+    width: 90%;
+  };
+}
+
+.container{
+  @include container();
+}
+
+// Contenedor flex
 @mixin flex-container($justify: center, $align: center, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-direction: $direction;
+}
+
+// Contenedor grid
+@mixin grid-container() {
+  display: grid;
+  grid-template-columns: repeat($grid-cols, 1fr);
+  grid-auto-rows: 1fr;
+  gap: $grid-gutter;
+  justify-content: center;
+}
+
+// Selecciona el tipo de texto y asigna el size, family y spacing con un mixin
+@mixin font($type) {
+  $style: map.get($font-styles, $type);
+
+  font-size: map.get($style, font-size);
+  line-height: map.get($style, line-height);
+  font-family: map.get($style, font-family);
+}
+
+@mixin button(){
+  background-color: $color-secundario;
+  color: $color-primario;
+  padding: $space-md $space-xxl;
+  border-radius: 20px;
+  cursor: pointer;
+
+  @include font(etiqueta);
+  font-weight: 900;
 }

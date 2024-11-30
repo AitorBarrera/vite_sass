@@ -2,13 +2,12 @@
 
 header{
     background-image: url(../assets/nocheEstrellada.jpg);
-
-    @include globals.flex-container(space-around, center, row);
-    width: 100%;
-    padding: globals.$space-xl;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     position: relative;
 
+    // Contenedor cristal para oscurecer la imagen de fondo
     .cristalNegro{
         background-color: globals.$color-background-header;
 
@@ -22,24 +21,38 @@ header{
         z-index: 1;
     }
 
-    img{
-        width: 15%;
-    }
+    .container{
+        @include globals.flex-container(space-between, center, row);    
+        padding: globals.$space-md 0;
 
-    nav{
-        flex-basis: 50%;
+        nav{
+            flex-basis: 50%;
 
-        ul{
-            @include globals.flex-container(space-between, center, row);
+            ul{
+                @include globals.flex-container(space-between, center, row);
 
-            li{
-                display: inline;
+                li{
+                    display: inline;
 
-                a{
-                    text-decoration: none;
-                    font-family: globals.$font-family-etiqueta;
+                    a{
+                        text-decoration: none;
+                        
+                        @include globals.font(etiqueta);
+                    }
                 }
             }
+            
+            @include globals.respond-to(medium){          
+                flex-basis: 100%;
+                width: 100%;
+                margin-top: globals.$space-lg;
+            };
         }
+
+        @include globals.respond-to(medium){          
+            @include globals.flex-container(space-between, center, column);
+            
+            width:90%
+        };
     }
 }

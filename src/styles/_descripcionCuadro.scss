@@ -1,0 +1,65 @@
+@use "globals" as globals;
+
+section.descripcionCuadro{
+
+    article#ciudadCuadro{
+        @include globals.grid-container();
+
+        margin: globals.$space-xl 0;
+
+        div.texto{
+            grid-column: 1/7;
+            
+            @include globals.flex-container(space-evenly,start,column);
+        }
+
+        figure{
+            grid-column: 7/13;
+            width: 100%;
+            
+            img{
+                width: 100%;
+            }
+        }
+
+        // movil
+        @include globals.respond-to(medium){
+            @include globals.flex-container(start, start, column);
+        }
+    }
+
+    article#museoCuadro{
+        @include globals.grid-container();
+
+        margin: globals.$space-xxl 0;
+
+        div.texto{
+            grid-column: 7/13;
+            
+            @include globals.flex-container(space-evenly,center,column);
+        }
+
+        figure{
+            grid-column: 1/7;
+            width: 100%;
+            
+            img{
+                width: 100%;
+            }
+        }
+
+        // movil
+        @include globals.respond-to(medium){
+            @include globals.flex-container(center, start, column-reverse);
+        }
+    }
+
+    div.buttonContainer{
+        @include globals.flex-container(center, start, row);
+        width: 100%;
+        
+        button{
+            @include globals.button();
+        }
+    }
+}
