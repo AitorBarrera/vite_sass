@@ -1,0 +1,34 @@
+@use "globals" as globals; // Importa todo desde globals
+
+#contacto{
+    color: globals.$color-secundario;
+
+    .container{
+        @include globals.grid-container(12);
+
+        h2{
+            text-align: center;
+            grid-column: 6/8;
+            grid-row: 1;
+        }
+
+        form{
+            grid-column: 3/10;
+            grid-row: 2;
+
+            @include globals.flex-container(space-between, start, column);
+
+            label{
+                @include globals.font(pequenyo);
+            }
+
+            input, textarea{
+                background-color: yellow;
+            }
+
+            button{
+                @include globals.button();
+            }
+        }
+    }
+}

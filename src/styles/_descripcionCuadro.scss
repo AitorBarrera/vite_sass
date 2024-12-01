@@ -3,7 +3,7 @@
 section.descripcionCuadro{
 
     article#ciudadCuadro{
-        @include globals.grid-container();
+        @include globals.grid-container(globals.$grid-cols);
 
         margin: globals.$space-xl 0;
 
@@ -29,7 +29,7 @@ section.descripcionCuadro{
     }
 
     article#museoCuadro{
-        @include globals.grid-container();
+        @include globals.grid-container(globals.$grid-cols);
 
         margin: globals.$space-xxl 0;
 

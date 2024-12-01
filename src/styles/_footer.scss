@@ -6,7 +6,7 @@ footer{
     background-size: cover;
 
     position: relative;
-    height: 150px;
+    margin-top: globals.$space-xl;
 
     // Contenedor cristal para oscurecer la imagen de fondo
     .cristalNegro{
@@ -23,7 +23,54 @@ footer{
     }
 
     .container{
-        @include globals.flex-container(space-between, center, row);    
-        padding: globals.$space-md 0;
+
+        .iconosContenedor{
+            @include globals.flex-container(space-between, center, row);   
+
+            padding: globals.$space-md 0;
+            @include globals.font(parrafo);
+
+            @include globals.respond-to(medium){
+                @include globals.flex-container(space-between, center, column);   
+            }
+
+            .iconosSocials{
+                @include globals.flex-container(space-between, center, row);   
+                width: 15%;
+
+                @include globals.respond-to(medium){   
+                    width: 80%;
+                    margin-bottom: globals.$space-xl;
+                }
+
+                a i{
+                    color: globals.$color-secundario;
+                }
+            }
+
+            .iconosHome{ 
+
+                a {
+                    @include globals.flex-container(space-between, center, row); 
+                    
+                    i{
+                        color: globals.$color-secundario;
+                        margin-right: globals.$space-xs;
+                    }
+
+                    text-decoration: none
+                }
+            }
+            
+        }
+
+        div{
+            @include globals.flex-container(center, center, row);
+
+            h3{
+                color: globals.$color-secundario;
+                margin: globals.$space-sm 0;
+            }
+        }
     }
 }

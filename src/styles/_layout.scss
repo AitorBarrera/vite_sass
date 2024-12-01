@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: globals.$color-secundario-texto;
     font-family: Lato;
     // cursor: wait;
 }
@@ -12,27 +11,28 @@
 body{
     background-color: globals.$color-primario-3;
 
-    @include globals.respond-to("small"){
-        background-color: #82ee2a;
-    }
 }
 
 h1{
     @include globals.font(h1);
+    color: globals.$color-secundario;
 }
 
 h2{
     @include globals.font(h2);
+    color: globals.$color-secundario;
 }
 
 p{
     @include globals.font(parrafo);
+    color: globals.$color-secundario-texto;
 
     @include globals.respond-to(medium){
         @include globals.font("parrafo-movil");
     };
 }
 
-figcaption{
+figcaption, a{
+    color: globals.$color-secundario-texto;
     @include globals.font(etiqueta);
 }

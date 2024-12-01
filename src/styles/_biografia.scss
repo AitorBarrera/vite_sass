@@ -10,7 +10,7 @@ section.biografia{
     }
 
     article#biografiaArticle{
-        @include globals.grid-container();
+        @include globals.grid-container(globals.$grid-cols);
 
         margin: globals.$space-xl 0;
         

@@ -25,6 +25,13 @@ header{
         @include globals.flex-container(space-between, center, row);    
         padding: globals.$space-md 0;
 
+        img{
+            width: 15%;
+            @include globals.respond-to(medium){     
+                width:60%
+            };
+        }
+
         nav{
             flex-basis: 50%;
 

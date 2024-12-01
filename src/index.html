@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <title>Vango web</title>
 </head>
 
@@ -12,21 +13,21 @@
   <header>
     <div class="cristalNegro"></div>
     <div class="container">
-      <img src="assets/logoVango.jpg" alt="logoVango">
+      <img src="assets/logoVango.jpg" alt="logoVango" class="logoVango">
       <nav>
         <ul>
-          <li><a href="#">INICIO</a></li>
-          <li><a href="#">CONTACTO</a></li>
+          <li><a href="#" class="botonInicio">INICIO</a></li>
+          <li><a href="#" class="botonContacto">CONTACTO</a></li>
           <li><a href="#">MERCHANDISE</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-  <div id="app">
-    <section class="portada">
-      <h1>LA NOCHE ESTRELLADA</h1>
-      <img src="assets/nocheEstrelladaLienzo.jpg" alt="cuadroNocheEstrellada">
+  <div id="inicio" class="pagina">
+    <section class="portada container">
+      <h1 class="container">LA NOCHE ESTRELLADA</h1>
+      <!-- <img src="assets/nocheEstrelladaLienzo.jpg" alt="cuadroNocheEstrellada"> -->
     </section>
 
     <section class="descripcionCuadro">
@@ -99,11 +100,63 @@
       </div>
     </section>
   </div>
+  <div id="contacto" class="pagina">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form action="">
+        <div class="grupo-form motivo-grupo-form">
+          <label for="">Motivo</label>
+          <input type="checkbox" name="motivo" value="queja">
+          <input type="checkbox" name="motivo" value="consejo">
+          <input type="checkbox" name="motivo" value="bug">
+        </div>
+
+        <div class="grupo-form email-grupo-form">
+          <label for="">Enviar como</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form asunto-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form mensaje-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form upload-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+        
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </div>
   </main>
+
   <footer>
     <div class="cristalNegro"></div>
     <div class="container">
-      <img src="assets/logo.jpg" alt="">
+      <div class="iconosContenedor">
+        <div class="iconosSocials">
+          <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+          <a href="http://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+          <a href="http://github.com"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="iconosHome">
+          <a href="#" class="botonInicio">
+            <i class="fa-solid fa-house"></i>
+            <img src="assets/logo.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>&copy; AITOR GONZALEZ BARRERA</h3>
+      </div>
     </div>
   </footer>
   <script type="module" src="scripts/main.js"></script>

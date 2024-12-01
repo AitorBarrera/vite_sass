@@ -111,3 +111,12 @@ $width-container: 65%;
 $border-h1: 0.75rem solid $color-secundario;
 $border-h2: 0.3rem solid $color-secundario;
 $border-img-portada: 0.1rem solid $color-primario;
+
+// Clases para Displays
+.d-none{
+  display: none;
+}
+
+.d-block{
+  display: block;
+}

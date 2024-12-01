@@ -3,17 +3,164 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-  <script type="module" crossorigin src="/assets/index-vjT_d8Bu.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DZCApuaI.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/vango/assets/logo-Bc0XbxO7.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <title>Vango web</title>
+  <script type="module" crossorigin src="/vango/assets/index-Dh2R-f2Y.js"></script>
+  <link rel="stylesheet" crossorigin href="/vango/assets/index-D-df8obO.css">
 </head>
 
 <body>
-  <h1>MY APP</h1>
-  <div id="app"></div>
+  <header>
+    <div class="cristalNegro"></div>
+    <div class="container">
+      <img src="/vango/assets/logoVango-BLf_V3ne.jpg" alt="logoVango" class="logoVango">
+      <nav>
+        <ul>
+          <li><a href="#" class="botonInicio">INICIO</a></li>
+          <li><a href="#" class="botonContacto">CONTACTO</a></li>
+          <li><a href="#">MERCHANDISE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+  <div id="inicio" class="pagina">
+    <section class="portada container">
+      <h1 class="container">LA NOCHE ESTRELLADA</h1>
+      <!-- <img src="assets/nocheEstrelladaLienzo.jpg" alt="cuadroNocheEstrellada"> -->
+    </section>
+
+    <section class="descripcionCuadro">
+      <div class="container">
+        <article id="ciudadCuadro">
+          <div class="texto">
+            <p>
+              La noche estrellada es un óleo sobre lienzo del pintor postimpresionista neerlandés Vincent van Gogh.
+            </p>
+            <p>
+              Pintado en junio de 1889, representa la vista desde la ventana orientada al este de su habitación de asilo
+              en Saint-Rémy-de-Provence, justo antes del amanecer, con la adición de un pueblo imaginario.
+            </p>
+          </div>
+          <figure>
+            <img src="/vango/assets/ciudad-DfYksaIe.jpg" alt="ciudad">
+            <figcaption>Saint-Rémy-de-Provence</figcaption>
+          </figure>
+        </article>
+
+        <article id="museoCuadro">
+          <figure>
+            <img src="/vango/assets/museo-73zzpGpU.jpg" alt="ciudad">
+            <figcaption>Museo de Arte Moderno de la ciudad de Manhattan, Nueva York</figcaption>
+          </figure>
+          <div class="texto">
+            <p>
+              Ha estado en la colección permanente del Museo de Arte Moderno de la ciudad de Nueva York desde 1941,
+              adquirida a través de Lillie P. Bliss Bequest.
+            </p>
+            <p>
+              Ampliamente considerada como la obra maestra del pintor. La noche estrellada es una de las pinturas más
+              reconocidas en la historia de la cultura occidental.
+            </p>
+          </div>
+        </article>
+
+        <div class="buttonContainer">
+          <a href="https://es.wikipedia.org/wiki/La_noche_estrellada" target="_blank"><button type="button">APRENDER
+              MAS</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="biografia">
+      <div class="container">
+        <h2>VAN GOGH</h2>
+        <article id="biografiaArticle">
+          <div class="texto">
+            <p>
+              Pintó unos 800 cuadros (entre ellos 43 autorretratos y 148 acuarelas) y realizó más de 1600 dibujos. Una
+              figura central en su vida fue su hermano menor Theo Van Gogh, marchante de arte en París, quien le prestó
+              apoyo financiero de manera continua y desinteresada.
+            </p>
+            <p>
+              La gran amistad entre ellos está documentada en las numerosas cartas que se intercambiaron desde agosto de
+              1872. De las 800 cartas que se conservan del pintor, unas 650 fueron para Theo; las otras son
+              correspondencia con amigos y familiares.
+            </p>
+          </div>
+          <figure>
+            <img src="/vango/assets/retrato-DkA_YbNc.jpg" alt="ciudad">
+            <figcaption>Autorretrato (Van Gogh; agosto de 1889)</figcaption>
+          </figure>
+          </article>
+          <div class="buttonContainer">
+            <a href="https://es.wikipedia.org/wiki/Vincent_van_Gogh" target="_blank"><button type="button">DESCUBRIR
+                MAS</button></a>
+          </div>
+      </div>
+    </section>
+  </div>
+  <div id="contacto" class="pagina">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form action="">
+        <div class="grupo-form motivo-grupo-form">
+          <label for="">Motivo</label>
+          <input type="checkbox" name="motivo" value="queja">
+          <input type="checkbox" name="motivo" value="consejo">
+          <input type="checkbox" name="motivo" value="bug">
+        </div>
+
+        <div class="grupo-form email-grupo-form">
+          <label for="">Enviar como</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form asunto-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form mensaje-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+
+        <div class="grupo-form upload-grupo-form">
+          <label for="">dsa</label>
+          <input type="text">
+        </div>
+        
+        <button type="submit">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <div class="cristalNegro"></div>
+    <div class="container">
+      <div class="iconosContenedor">
+        <div class="iconosSocials">
+          <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+          <a href="http://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+          <a href="http://github.com"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="iconosHome">
+          <a href="#" class="botonInicio">
+            <i class="fa-solid fa-house"></i>
+            <img src="/vango/assets/logo-Bc0XbxO7.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3>&copy; AITOR GONZALEZ BARRERA</h3>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
