@@ -2,7 +2,7 @@ import "../styles/main.scss";
 
 // Carga por defecto con la pagina inicial
 document.addEventListener("DOMContentLoaded", event =>{
-    cambiarHtml("inicio");
+    cambiarHtml("contacto");
 })
 
 // Inserta el evento para mostrar solo la pagina inicial en los botones que 

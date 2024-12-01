@@ -105,33 +105,49 @@
       <h2>Contacto</h2>
       <form action="">
         <div class="grupo-form motivo-grupo-form">
-          <label for="">Motivo</label>
-          <input type="checkbox" name="motivo" value="queja">
-          <input type="checkbox" name="motivo" value="consejo">
-          <input type="checkbox" name="motivo" value="bug">
+          <label for="">Motivo: </label>
+          
+          <label for="motivoQueja" class="etiqueta">
+            <input type="checkbox" name="motivo" value="queja" id="motivoQueja"> Queja
+          </label>
+
+          <label for="motivoConsejo" class="etiqueta">
+            <input type="checkbox" name="motivo" value="consejo" id="motivoConsejo"> Consejo
+          </label>
+
+          <label for="motivoBug" class="etiqueta">
+            <input type="checkbox" name="motivo" value="bug" id="motivoBug"> Bug
+          </label>
         </div>
 
         <div class="grupo-form email-grupo-form">
-          <label for="">Enviar como</label>
-          <input type="text">
+          <label for="">Enviar como: </label>
+          <label for="enviadoAnonimo" class="etiqueta"><input type="radio" name="email" value="anonimo" id="enviadoAnonimo"> Anonimo</label>
+          
+          <div class="enviadoEmailContenedor">
+            <label for="enviadoEmail" class="etiqueta"><input type="radio" name="email" value="email" id="enviadoEmail"> Correo:</label>
+            <input type="text">
+          </div>
         </div>
 
         <div class="grupo-form asunto-grupo-form">
-          <label for="">dsa</label>
+          <label for="">Asunto: </label>
           <input type="text">
         </div>
 
         <div class="grupo-form mensaje-grupo-form">
-          <label for="">dsa</label>
-          <input type="text">
+          <label for="">Cuerpo del mensaje <i class="fa-solid fa-message"></i> : </label>
+          <textarea name="mensaje" id="mensaje" rows="10"></textarea>
         </div>
 
         <div class="grupo-form upload-grupo-form">
-          <label for="">dsa</label>
-          <input type="text">
+          <label for="">Subir archivo <i class="fa-solid fa-upload"> : </i>
+            <input type="file" name="" id=""></label>
         </div>
         
-        <button type="submit">ENVIAR</button>
+        <div class="grupo-form button-grupo-form">
+          <button type="submit">ENVIAR</button>
+        </div>
       </form>
     </div>
   </div>

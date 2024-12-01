@@ -5,11 +5,17 @@
 
     .container{
         @include globals.grid-container(12);
+        grid-auto-rows: auto;
+
+        @include globals.respond-to(medium){display: block;}
+
 
         h2{
             text-align: center;
             grid-column: 6/8;
             grid-row: 1;
+            font-weight: 400;
+            text-shadow: 5px 5px globals.$color-primario;
         }
 
         form{
@@ -18,17 +24,169 @@
 
             @include globals.flex-container(space-between, start, column);
 
+            .etiqueta{
+                color: globals.$color-secundario-3;
+            }
+
             label{
                 @include globals.font(pequenyo);
+
+                &.etiqueta{
+                    @include globals.font(etiqueta);
+                }
             }
 
             input, textarea{
-                background-color: yellow;
+                background-color: transparent;
+                color: globals.$color-secundario-texto;
+                border: 3px solid globals.$color-secundario-2;
+                border-radius: 10px;
+                padding: globals.$space-xs;
             }
 
-            button{
-                @include globals.button();
+            // input[type="radio"] {
+            //     margin-right: 4px;
+            // }
+            input[type="radio"] {
+                -webkit-appearance: none;
+                appearance: none;
+                margin-right: 4px;
+
+                display: grid;
+                place-content: center;
+                border-radius: 50%;
+                padding: 2px 0 2px 10px;
+
+                &::before {
+                    font-size: 1rem;
+                    content: "";
+                    width: 1.5em;
+                    height: 1.5em;
+                    border: 100%;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1em 1em var(--form-control-color);
+                }
+
+                &:checked::before {
+                    transform: scale(1);
+                }
             }
+
+            // Dar estilo propio a los input checkboxes
+            input[type="checkbox"] {
+                -webkit-appearance: none;
+                appearance: none;
+                margin-right: 4px;
+
+                display: grid;
+                place-content: center;
+                padding: 2px 0 2px 10px;
+
+                &::before {
+                    font-size: 1rem;
+                    content: "✓";
+                    width: 1.5em;
+                    height: 1.5em;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    box-shadow: inset 1em 1em var(--form-control-color);
+                }
+
+                &:checked::before {
+                    transform: scale(1);
+                }
+            }
+
+            
+            .grupo-form{
+                margin: globals.$space-xs 0;
+                width: 100%;
+            }
+
+            .motivo-grupo-form{
+                width: 50%;
+                @include globals.flex-container(space-between, center, row);
+                @include globals.respond-to(medium){width: 100%}
+
+                label{
+                    @include globals.flex-container(center, center, row);
+                }
+
+                input{
+                    margin-left: globals.$space-md;
+                }
+            }
+
+            .email-grupo-form{
+                grid-row: 2;
+                @include globals.flex-container(space-between, center, row);
+                @include globals.respond-to(medium){align-items: start; flex-direction: column;}
+
+                .etiqueta{
+                    @include globals.flex-container(space-between, center, row);
+                }
+
+                .enviadoEmailContenedor{
+                    @include globals.flex-container(start, center, row);
+
+                    width: 60%;
+                    @include globals.respond-to(medium){width: 100%;}
+
+                    input{
+                        margin-left: globals.$space-xs;
+
+                        &:nth-child(1){
+                            @include globals.respond-to(medium){margin-left: 0;}
+                        }
+
+                        &:nth-child(2){
+                            width: 100%;
+                            @include globals.respond-to(medium){width: 100%;}
+                        }
+                    }
+                }
+
+            }
+
+            .asunto-grupo-form{
+                grid-row: 3;
+                @include globals.flex-container(start, start, column);
+
+                input{
+                    width: 100%;
+                }
+            }
+
+            .mensaje-grupo-form{
+                grid-row: 4;
+                @include globals.flex-container(space-between, start, column);
+
+                textarea{
+                    width: 100%;
+                }
+            }
+
+            .upload-grupo-form{
+                grid-row: 5;
+                @include globals.flex-container(space-between, start, column);
+
+                input{
+                    border: 0;
+                    padding: 0;
+                    @include globals.respond-to(medium){margin-left: 0;}
+                }
+            }
+
+            .button-grupo-form{
+                @include globals.flex-container(center, center, column);
+                width: 100%;
+
+                button{
+                    @include globals.button();
+                }
+            }
+
         }
     }
 }
