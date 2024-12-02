@@ -4,7 +4,7 @@
 @mixin respond-to($breakpoint) {
   $breakpoints: (
     "small": "max-width: 599px",
-    "medium": "max-width: 1500px",
+    "medium": "max-width: 900px",
   );
 
   $query: map.get($breakpoints, $breakpoint);
