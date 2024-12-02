@@ -28,7 +28,7 @@ header{
         img{
             width: 15%;
             @include globals.respond-to(medium){     
-                width:60%
+                width:30%
             };
         }
 

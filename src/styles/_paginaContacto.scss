@@ -59,8 +59,8 @@
 
                 &::before {
                     font-size: 1rem;
-                    content: "";
-                    width: 1.5em;
+                    content: "●";
+                    width: 1.2em;
                     height: 1.5em;
                     border: 100%;
                     transform: scale(0);
@@ -86,7 +86,7 @@
                 &::before {
                     font-size: 1rem;
                     content: "✓";
-                    width: 1.5em;
+                    width: 1.2em;
                     height: 1.5em;
                     transform: scale(0);
                     transition: 120ms transform ease-in-out;
@@ -106,15 +106,27 @@
 
             .motivo-grupo-form{
                 width: 50%;
-                @include globals.flex-container(space-between, center, row);
-                @include globals.respond-to(medium){width: 100%}
-
-                label{
-                    @include globals.flex-container(center, center, row);
+                @include globals.flex-container(space-between, start, row);
+                @include globals.respond-to(medium){
+                    flex-direction: column; 
+                    width : 100%
                 }
 
-                input{
-                    margin-left: globals.$space-md;
+                div{
+                    flex-basis: 100%;
+                    @include globals.flex-container(space-between, center, row);
+
+                    #motivoQueja{
+                        @include globals.respond-to(medium){margin-left: 0};
+                    }
+
+                    label{
+                        @include globals.flex-container(center, center, row);
+                    }
+
+                    input{
+                        margin-left: globals.$space-md;
+                    }
                 }
             }
 

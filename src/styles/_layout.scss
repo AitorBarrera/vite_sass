@@ -27,7 +27,7 @@ p{
     @include globals.font(parrafo);
     color: globals.$color-secundario-texto;
 
-    @include globals.respond-to(medium){
+    @include globals.respond-to(large){
         @include globals.font("parrafo-movil");
     };
 }
