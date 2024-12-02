@@ -5,6 +5,7 @@
   $breakpoints: (
     "small": "max-width: 599px",
     "medium": "max-width: 900px",
+    "large": "max-width: 1500px"
   );
 
   $query: map.get($breakpoints, $breakpoint);

@@ -7,7 +7,7 @@
         @include globals.grid-container(12);
         grid-auto-rows: auto;
 
-        @include globals.respond-to(medium){display: block;}
+        @include globals.respond-to(large){display: block;}
 
 
         h2{

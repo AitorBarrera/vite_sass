@@ -6,5 +6,5 @@ export default defineConfig({
         outDir: "../docs",
 
     },
-    base: "/vango",
+    base: "/vite_sass",
 })
