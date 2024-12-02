@@ -38,7 +38,7 @@ function cambiarHtml(id) {
     }
     );
 
-    const paginaMostrada = document.querySelector(`#${id}`);
-    paginaMostrada.classList.remove("d-none");
-    paginaMostrada.classList.add("d-block");
+    const paginaAMostrar = document.querySelector(`#${id}`);
+    paginaAMostrar.classList.remove("d-none");
+    paginaAMostrar.classList.add("d-block");
 }

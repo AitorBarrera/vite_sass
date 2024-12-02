@@ -36,10 +36,11 @@ footer{
 
             .iconosSocials{
                 @include globals.flex-container(space-between, center, row);   
-                width: 15%;
+                
+                width: 20%;
 
                 @include globals.respond-to(medium){   
-                    width: 80%;
+                    width: 50%;
                     margin-bottom: globals.$space-xl;
                 }
 

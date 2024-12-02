@@ -25,11 +25,12 @@
             @include globals.flex-container(space-between, start, column);
 
             .etiqueta{
-                color: globals.$color-secundario-3;
+                color: globals.$color-secundario;
             }
 
             label{
                 @include globals.font(pequenyo);
+                color: globals.$color-secundario-3;
 
                 &.etiqueta{
                     @include globals.font(etiqueta);
@@ -37,9 +38,10 @@
             }
 
             input, textarea{
+                @include globals.font(etiqueta);
                 background-color: transparent;
                 color: globals.$color-secundario-texto;
-                border: 3px solid globals.$color-secundario-2;
+                border: 3px solid globals.$color-secundario;
                 border-radius: 10px;
                 padding: globals.$space-xs;
             }
@@ -186,7 +188,11 @@
                 input{
                     border: 0;
                     padding: 0;
-                    @include globals.respond-to(medium){margin-left: 0;}
+                    @include globals.respond-to(medium){
+                        margin-left: 0;
+                        font-size: 1rem;
+                    }
+
                 }
             }
 
