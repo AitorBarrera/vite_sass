@@ -1,6 +1,6 @@
 # P3.1 Maquetación con Vite y SASS
 
-![Image](assets/nocheEstrelladaLienzo.jpg)
+![Image](/src/assets/nocheEstrelladaLienzo.jpg)
 
 | **Curso**       | S2DAW 2024-2025                     |
 |------------------|-------------------------------------|
